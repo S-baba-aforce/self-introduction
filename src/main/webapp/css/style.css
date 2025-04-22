@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "A1 Gothic R", sans-serif;
+	line-height: 1.6;
+	background-color: whitesmoke;
+	color: #333;
+	cursor: none; /* デフォルトのカーソルを消す */
+}
+
+/*=========カーソル機能==========*/
+.cursor-circle {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: coral;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.75;
+  transform: translate(-50%, -50%);
+}
+
+
+/*============ヘッダー===========*/
+
+.birthday{
+	margin-left: 15%;
+	margin-top: 5%;
+	font-size: 0.9rem;
+}
+
+.birthday a {
+	color: black; 
+    text-decoration: none;
+}
+/*丸*/
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: coral;
+  border-radius: 50%; 
+  margin-left: 80%;
+}
+
+
+.site-title {
+	text-align: center;  
+	margin-top: 0;
+}	
+
+.logo {
+	font-size: 3rem;
+	font-weight: bold;
+	place-items: center;
+	height: 10%;
+	margin-top: 0;
+	margin-bottom: 5%;
+}
+
+/*self-introduction 繰り返し*/
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: inline-flex;
+  animation: scroll-loop 32s linear infinite;
+}
+
+.second-logo {
+  color: black;     
+  padding-right: 50px; 
+  white-space: nowrap;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*==========ファーストイントロ==========*/
+.first-intro h3 {
+	margin-top: 10%;
+	margin-left: 54%; 
+	}
+	
+#intro-img {
+	margin-top: 2%;
+	width: 30%;
+	height: 30%;
+	padding-left: 30%;
+	position: relative;  
+	margin-bottom: 3%;
+}
+
+/*===========メニューバー=============*/
+.first-intro ul li {
+	list-style: none;
+	font-family: "A1 Gothic R", sans-serif;
+ }
+
+.first-intro ul li a {
+	padding-left: 47%;
+	font-size: 30px;
+	text-decoration: none;
+	color: inherit;
+ }
+ 
+ /*===========メニューバーに下線==========*/
+
+ .first-intro li a{
+    /*線の基点とするためrelativeを指定*/
+ 	position: relative;
+ }
+
+ .first-intro li.current a,
+ .first-intro li a:hover{
+ 	color:coral;
+ }
+
+ .first-intro li a::after {
+     content: '';
+     /*絶対配置で線の位置を決める*/
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     /*線の形状*/
+     width: 80%;
+     height: 2px;
+     background:coral;
+     /*アニメーションの指定*/
+     transition: all .3s;
+     transform: scale(0, 1);  /*X方向0、Y方向1*/
+     transform-origin: center top;  /*上部中央基点*/
+ }
+
+ /*現在地とhoverの設定*/
+ .first-intro li.current a::after,
+ .first-intro li a:hover::after {
+     transform: scale(0.5, 1);  /*X方向にスケール拡大*/
+ } 
+ 
+/*==========プロフィール===========*/ 
+
+h2 {
+	margin-top: 15%;
+	font-size: 40px;
+	text-align: center;
+}
+
+.profile {
+  list-style: none;
+  padding: 0;
+  width: 60%;
+  margin: auto;
+  font-family: "A1 Gothic R", sans-serif;
+  font-size: 1.1rem;
+}
+
+.profile li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 0.4px solid #ccc;  /*区切り線で整える */
+}
+
+/*項目*/
+.profile .label {
+  font-weight: bold;
+  width: 30%;
+  padding-left: 35%;
+}
+
+/*詳細*/
+.profile .value {
+  width: 65%;
+  padding-right: 0;
+}
+
+/*================セカンドイントロ==================*/
+ 
+/* 共通のセクションスタイル（横並びにする） */
+.work-history,
+.treasured,
+.my-hobby {               
+  margin-bottom: 60px;      
+}
+
+/* セクション内の見出し（上に固定） */
+.work-history h2,
+.treasured h2,
+.my-hobby h2 {
+  text-align: center;       
+  margin-bottom: 20px;
+}
+
+/* 各画像・リスト・画像を横並びにする部分 */
+.content-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  margin-bottom: 10%;
+}
+
+/* 各画像のスタイル */
+.work-history img,
+.treasured img,
+.my-hobby img {
+  width: 25%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  
+}
+
+/* 各リストのスタイル */
+.history,
+.liked,
+.doing {
+  font-weight: bold;	
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 3;
+  white-space: nowrap;   /*改行を防ぐ*/
+}
+
+/*リンクを埋め込んだテキストの青文字と下線を無効*/
+.history-item a,
+.liked-item a,
+.doing-item a {
+  color: black; 
+  text-decoration: none;
+}
+
+
+/*テキスト色変化*/
+.history-item a,
+.liked-item a,
+.doing-item a,
+#page-top {
+  transition: color 0.3s ease;
+}
+
+
+
+.history-item a:hover {
+  color: coral;
+}
+
+.liked-item a:hover {
+	color: coral;
+}
+.doing-item a:hover  {
+  color: coral;
+} 
+
+#page-top a:hover {
+	color: coral;
+}
+
+/*===========トップページ===========*/
+#page-top a{
+    display: block;
+    padding:20px;
+	width:100%;
+	color: black;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:1.2rem;
+	transition:all 0.3s;
+}
+
+
+/*==========フッター==========*/
+
+#footer {
+  text-align: right;
+  margin-top: 10%;
+}

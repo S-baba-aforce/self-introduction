@@ -1,10 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+	
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Baba_Shunta</title>
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="css/style.css">
+	
 </head>
-<body>
 
+
+<body>
+	<!----------------ヘッダー------------------>
+	
+	<h5 class="birthday"><a href="https://www.jiji.com/jc/graphics?p=ve_soc_general-10bignews2001" target="_blank">11052001</a></h5>
+	<div class="circle"></div>
+	<header class="site-title">
+		<h1 class="logo">BaBa_Shunta</h1>
+			<hr class="divider">            <!--区切り線-->
+			<div class="marquee-wrapper">
+			  <div class="marquee">
+			    <h1 class="second-logo">・Self_introduction ・Self_introduction ・Self_introduction・Self_introduction・Self_introduction</h1>
+				<h1 class="second-logo">・Self_introduction ・Self_introduction ・Self_introduction・Self_introduction・Self_introduction</h1>
+			  </div>
+			</div>
+			<hr class="divider">        <!--区切り線-->
+				
+	</header>
+	
+
+	<!--------------メイン-------------->
+	<main>
+		<section class="first-intro">
+			<h3>
+				Je suis né en 2001 à Chiba, au Japon.<br>
+				J'ai 23 ans.<br>
+				Je travaille actuellement comme nouvel employé dans une société 
+				informatique et j'essaie de nouvelles choses.<br>
+				Je veux travailler dur, rencontrer beaucoup de gens <br>
+				et vivre une vie heureuse.	
+			</h3>
+			<img id="intro-img" src="img/1intro.jpeg" alt="背景画像" class="background-image">
+			<!--お品書き-->
+			<nav>
+				<ul>
+					<li><a href="#aboutme">→ About  me</a></li>
+					<li><a href="#experience">→ Experiences</a></li>
+					<li><a href="#favorites">→ Favorites</a></li>
+					<li><a href="#hobby">→ Hobbies</a></li>
+				</ul>
+			</nav>
+		</section>
+		
+		<!------------プロフィール-------------->
+		<section class="second-intro">
+			<div class="i-am">
+			<h2 id="aboutme">About me</h2>
+				<ul class="profile">
+					<li><span class="label">-From-</span><span class="value">千葉 , 日本</span></li>
+					<li><span class="label">-Age-</span><span class="value">23</span></li>
+					<li><span class="label">-School-</span><span class="value">順天堂大学</span></li>
+					<li><span class="label">-Family-</span><span class="value">父, 母, 姉</span></li>
+					<li><span class="label">-Nickname-</span><span class="value">ばばちゃん, ばばしゅん</span></li>
+					<li><span class="label">-MBTI-</span><span class="value">INFJ</span></li>
+				</ul>
+			</div>	
+			
+		<!-----------経歴------------>	
+			<div class="work-history">
+			<h2 id="experience">Experiences</h2>
+			  <div class="content-row">
+				<img id="muji-img" src="img/muji.jpg">
+				
+				<ul class="history">
+					<li class="history-item"><a href="https://www.muji.com/jp/ja/store?srsltid=AfmBOordJNP1a8vwfFQP_FAFzk0gLKcXcqL8pTb5wjBMuNBEmd9etQrB" target="_blank">-  Muji Staff  -</a></li>
+					<li class="history-item"><a href="https://www.mina.ne.jp/" target="_blank">-  Magazin Assistant Editor  -</a></li>
+				</ul>
+				<img id="mina-img" src="img/mina1.jpg">
+				
+			  </div>	
+			</div>
+			
+		<!----------好きなもの----------->	
+			<div class="treasured">
+			<h2 id="favorites">Favorites</h2>
+			  <div class="content-row">
+				<img id="indigolaend" src="img/indigolaend.jpg">
+				<ul class="liked">
+					<li class="liked-item"><a href="https://www.instagram.com/aman0jack/" target="_blank">-  Home accessories  -</a></li>
+					<li class="liked-item"><a href="https://indigolaend.com/" target="_blank">-  J-rock  -</a></li>
+					<li class="liked-item"><a href="https://www.aardman-jp.com/shaun/" target="_blank">-  Shaun the Sheep  -</a></li>
+				</ul>
+			  	<img id="sheep" src="img/1sheep.webp">
+				
+			  </div>	
+			</div>
+			
+		<!----------趣味----------->	
+			<div class="my-hobby">
+			<h2 id="hobby">Hobbies</h2>
+			  <div class="content-row">
+				<img id="drama" src="img/food-drama.jpg">
+				
+				<ul class="doing">
+					<li class="doing-item"><a href="https://www.shochiku-tokyu.co.jp/atable-nostalgiques/" target="_blank">-  Dramas  -</a></li>
+					<li class="doing-item"><a href="https://www.netflix.com/jp/title/81669953" target="_blank">-  Dating reality show  -</a></li>
+					<li class="doing-item"><a href="https://www.nmwa.go.jp/jp/exhibitions/2025dokomiru.html" target="_blank">-  Special exhibition  -</a></li>
+					<li class="doing-item"><a href="https://www.instagram.com/sirturday/" target="_blank">-  Vintage store hopping  -</a></li>
+				</ul>
+				<img id="vintage" src="img/vintage.jpg">
+				
+			  </div>	
+			</div>
+					
+		</section>
+			
+	</main>
+	
+	<!--トップページへ-->
+	<hr class="divider">
+	<p id="page-top"><a href="#">Page Top</a></p>
+	<hr class="divider">
+	
+		<!-----------フッター----------->
+		<footer id="footer">
+			<p>&copy; 2025 BBS ink.</p>
+		</footer>
+		
+		<!-- jQuery、jQuery Easing Plugin-->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<!--自作のJS-->
+		<script src="script.js"></script>	
+		
 </body>
 </html>
